@@ -1489,7 +1489,7 @@ void ir_print_metal_visitor::visit(ir_dereference_array *ir)
 {
     ir->array->accept(this);
     ir_variable *var = ((ir_dereference_variable*)ir->array)->variable_referenced();
-    if(this->mode == kPrintGlslNone && ((var->data.mode == ir_var_shader_out) || (var->data.mode == ir_var_shader_in)))
+    if(this->mode == kPrintGlslNone && var != NULL && ((var->data.mode == ir_var_shader_out) || (var->data.mode == ir_var_shader_in)))
     {
         ir_constant* arrayIndex = (ir_constant*)ir->array_index;
         buffer.asprintf_append("%u", arrayIndex->value.u[0]);
