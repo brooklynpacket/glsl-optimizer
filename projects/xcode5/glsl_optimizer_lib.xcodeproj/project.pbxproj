@@ -811,6 +811,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = glsl_optimizer;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -828,6 +829,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = glsl_optimizer;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
